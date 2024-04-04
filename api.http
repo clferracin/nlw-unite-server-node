@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": "NLW Unite",
+  "details": "Evento para apaixonados por programação.",
+  "maximumAttendees": 100
+}
+
+###
+
+POST http://localhost:3333/events/2fd451a3-4134-4881-8e0c-2052f2df636d/attendees
+Content-Type: application/json
+
+{
+  "name": "Cesar Luiz Ferracin",
+  "email": "cesarluizferracin@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/2fd451a3-4134-4881-8e0c-2052f2df636d
+
+###
+
+GET http://localhost:3333/attendees/10000/badge
+
+###
+
+GET http://localhost:3333/attendees/10000/check-in
+
+###
+
+GET http://localhost:3333/events/2fd451a3-4134-4881-8e0c-2052f2df636d/attendees?query=cesar
